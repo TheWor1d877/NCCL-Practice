@@ -1,0 +1,25 @@
+shrink_demo.c: In function ‘main’:
+shrink_demo.c:27:17: warning: passing argument 1 of ‘cudaMalloc’ from incompatible pointer type [-Wincompatible-pointer-types]
+   27 |   CK(cudaMalloc(&sendbuf, bytes));
+      |                 ^~~~~~~~
+      |                 |
+      |                 float **
+shrink_demo.c:12:18: note: in definition of macro ‘CK’
+   12 |   int _r = (int)(call); \
+      |                  ^~~~
+In file included from /usr/local/cuda/include/cuda_runtime.h:95,
+                 from shrink_demo.c:8:
+/usr/local/cuda/include/cuda_runtime_api.h:4581:76: note: expected ‘void **’ but argument is of type ‘float **’
+ 4581 | extern __host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaMalloc(void **devPtr, size_t size);
+      |                                                                     ~~~~~~~^~~~~~
+shrink_demo.c:28:17: warning: passing argument 1 of ‘cudaMalloc’ from incompatible pointer type [-Wincompatible-pointer-types]
+   28 |   CK(cudaMalloc(&recvbuf, bytes));
+      |                 ^~~~~~~~
+      |                 |
+      |                 float **
+shrink_demo.c:12:18: note: in definition of macro ‘CK’
+   12 |   int _r = (int)(call); \
+      |                  ^~~~
+/usr/local/cuda/include/cuda_runtime_api.h:4581:76: note: expected ‘void **’ but argument is of type ‘float **’
+ 4581 | extern __host__ __cudart_builtin__ cudaError_t CUDARTAPI cudaMalloc(void **devPtr, size_t size);
+      |                                                                     ~~~~~~~^~~~~~

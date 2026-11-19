@@ -1,0 +1,91 @@
+Found 2 CUDA device(s) available
+
+Available GPU devices:
+  GPU 0: NVIDIA A100-SXM4-40GB (CUDA Device 0)
+    Compute Capability: 8.0
+    Memory: 39.5 GB
+  GPU 1: NVIDIA A100-SXM4-40GB (CUDA Device 1)
+    Compute Capability: 8.0
+    Memory: 39.5 GB
+Using ncclCommInitAll() to create all communicators simultaneously
+All 2 NCCL communicators initialized successfully
+
+Communicator Details:
+  Communicator 0: Rank 0/2 on CUDA device 0
+  Communicator 1: Rank 1/2 on CUDA device 1
+All communicators have the expected size of 2
+
+Synchronizing all CUDA streams...
+All streams synchronized
+Destroying NCCL communicators...
+All NCCL communicators destroyed
+Destroying CUDA streams...
+All CUDA streams destroyed
+
+=============================================================
+SUCCESS: Multiple devices single process example completed!
+=============================================================
+
+EXIT=0 cmd=./01_multiple_devices_single_process/c/multiple_devices_single_process
+Using 2 devices with pthreads
+Creating 2 threads for NCCL communicators
+  Thread 0: Set device 0 and created stream
+  Thread 1: Set device 1 and created stream
+  Thread 1: NCCL communicator initialized
+  Thread 1: Communicator rank 1 of 2
+  Thread 0: NCCL communicator initialized
+All threads initialized - communicators ready
+  Thread 0: Communicator rank 0 of 2
+  Thread 1: Destroyed NCCL communicator
+  Thread 1: Resources cleaned up
+  Thread 0: Destroyed NCCL communicator
+  Thread 0: Resources cleaned up
+All threads completed
+Success
+EXIT=0 cmd=./02_one_device_per_pthread/c/one_device_per_pthread
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./03_one_device_per_process_mpi/c/one_device_per_process_mpi
+Node: ubuntu24
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+EXIT=132 cmd=mpirun --allow-run-as-root -np 2 ./03_one_device_per_process_mpi/c/one_device_per_process_mpi
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Starting NCCL communicator lifecycle example with 2 processes
+  MPI initialized - Process 0 of 2 total processes
+  MPI initialized - Process 1 of 2 total processes
+  Found 2 CUDA devices on this node
+  Found 2 CUDA devices on this node
+  MPI rank 0 assigned to CUDA device 0
+  MPI rank 1 assigned to CUDA device 1
+Rank 0 generated NCCL unique ID for all processes
+INFO: Rank 0 received NCCL unique ID
+INFO: Rank 1 received NCCL unique ID
+  Rank 0 created NCCL communicator
+  MPI rank 0 → NCCL rank 0/2 on GPU device 0
+
+All communicators initialized successfully! Beginning cleanup...
+  Rank 1 created NCCL communicator
+  MPI rank 1 → NCCL rank 1/2 on GPU device 1
+  Rank 1 destroyed NCCL communicator
+  Rank 0 destroyed NCCL communicator
+
+All NCCL communicators created and cleaned up properly!
+This example demonstrated the complete NCCL communicator lifecycle.
+Next steps: Try running NCCL collective operations (AllReduce, etc.)
+EXIT=0

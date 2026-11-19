@@ -1,0 +1,3 @@
+tokens=255 TTFT=21.3ms TPOT=2.76ms decode_tok/s=362.5
+tokens=170 TTFT=12.5ms TPOT=3.87ms decode_tok/s=258.2
+tokens=172 TTFT=12.8ms TPOT=3.93ms decode_tok/s=254.2

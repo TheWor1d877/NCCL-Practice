@@ -1,0 +1,23 @@
+Starting NCCL ring communication example
+Using 2 GPUs for ring communication
+Preparing data structures
+Initializing NCCL communicators
+All communicators initialized successfully
+Creating CUDA streams and verifying setup
+  GPU 0 -> NCCL rank 0/2 on CUDA device 0
+  GPU 1 -> NCCL rank 1/2 on CUDA device 1
+Setting up ring topology
+Data flow -> GPU 0 -> ... -> GPU 1 -> GPU 0
+Ring transfer with 268435456 elements (1.00 GB per GPU)
+Allocating and initializing buffers
+Executing ring communication
+  GPU 0 sends to GPU 1, receives from GPU 1
+  GPU 1 sends to GPU 0, receives from GPU 0
+Ring communication completed successfully
+Verifying data correctness
+  GPU 0 received data from GPU 1: CORRECT
+  GPU 1 received data from GPU 0: CORRECT
+SUCCESS - All GPUs received correct data
+Cleaning up resources
+Example completed successfully!
+EXIT=0 cmd=./01_ring_pattern/c/ring_pattern

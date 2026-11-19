@@ -1,0 +1,7 @@
+NVCC_GENCODE is -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_100,code=sm_100 -gencode=arch=compute_120,code=sm_120 -gencode=arch=compute_110,code=sm_110 -gencode=arch=compute_120,code=compute_120
+make[1]: Entering directory '/root/nccl-src/docs/examples/01_communicators/01_multiple_devices_single_process/c'
+NVCC_GENCODE is -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_100,code=sm_100 -gencode=arch=compute_120,code=sm_120 -gencode=arch=compute_110,code=sm_110 -gencode=arch=compute_120,code=compute_120
+make[1]: Leaving directory '/root/nccl-src/docs/examples/01_communicators/01_multiple_devices_single_process/c'
+make[1]: Entering directory '/root/nccl-src/docs/examples/01_communicators/02_one_device_per_pthread/c'
+NVCC_GENCODE is -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_100,code=sm_100 -gencode=arch=compute_120,code=sm_120 -gencode=arch=compute_110,code=sm_110 -gencode=arch=compute_120,code=compute_120
+make[1]: Leaving directory '/root/nccl-src/docs/examples/01_communicators/02_one_device_per_pthread/c'

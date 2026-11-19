@@ -1,0 +1,7 @@
+make: Entering directory '/root/nccl-src/docs/examples/02_point_to_point'
+make -C 01_ring_pattern/c
+make[1]: Entering directory '/root/nccl-src/docs/examples/02_point_to_point/01_ring_pattern/c'
+NVCC_GENCODE is -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_100,code=sm_100 -gencode=arch=compute_120,code=sm_120 -gencode=arch=compute_110,code=sm_110 -gencode=arch=compute_120,code=compute_120
+Built target ring_pattern
+make[1]: Leaving directory '/root/nccl-src/docs/examples/02_point_to_point/01_ring_pattern/c'
+make: Leaving directory '/root/nccl-src/docs/examples/02_point_to_point'

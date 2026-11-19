@@ -1,0 +1,45 @@
+Creating 2 threads for 2 devices
+NCCL Example: One Device per Thread
+===================================
+Starting AllReduce example with 2 ranks
+  Rank 1 communicator initialized using device 1
+  Rank 1 allocating 4.00 MB per buffer
+  Rank 0 communicator initialized using device 0
+Symmetric Memory allocation
+  Rank 0 allocating 4.00 MB per buffer
+  Rank 0 data initialized (value: 0)
+Starting AllReduce with 1048576 elements (4 MB)
+  Rank 1 data initialized (value: 1)
+AllReduce completed successfully
+Verification - Expected: 1.0, Got: 1.0
+Results verified correctly
+  Rank 0 symmetric memory windows deregistered
+  Rank 1 symmetric memory windows deregistered
+All resources cleaned up successfully
+Example completed - demonstrated symmetric memory lifecycle
+
+All NCCL communicators finalized successfully!
+EXIT=0 cmd=./01_allreduce/c/allreduce_sm
+Creating 2 threads for 2 devices
+NCCL Example: One Device per Thread
+===================================
+Starting AllGather example with 2 ranks (Copy Engine enabled)
+  Rank 1 communicator initialized using device 1 (CTAPolicy=2)
+  Rank 1 allocating 4.00 MB send buffer, 8.00 MB recv buffer
+  Rank 0 communicator initialized using device 0 (CTAPolicy=2)
+Symmetric Memory allocation
+  Rank 0 allocating 4.00 MB send buffer, 8.00 MB recv buffer
+  Rank 0 data initialized (value: 0)
+Starting AllGather with 1048576 elements per rank (8 MB total)
+  Rank 1 data initialized (value: 1)
+AllGather completed successfully
+Verification - Segment 0: Expected: 0.0, Got: 0.0
+Verification - Segment 1: Expected: 1.0, Got: 1.0
+  Rank 1 symmetric memory windows deregistered
+Results verified correctly
+  Rank 0 symmetric memory windows deregistered
+All resources cleaned up successfully
+Example completed - demonstrated symmetric memory + copy engine allgather
+
+All NCCL communicators finalized successfully!
+EXIT=0 cmd=./02_allgather/c/allgather_ce

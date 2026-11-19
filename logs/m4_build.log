@@ -1,0 +1,5 @@
+make -C src build BUILDDIR=/root/nccl-tests/build
+make[1]: Entering directory '/root/nccl-tests/src'
+make[2]: Entering directory '/root/nccl-tests/os'
+make[2]: Leaving directory '/root/nccl-tests/os'
+make[1]: Leaving directory '/root/nccl-tests/src'

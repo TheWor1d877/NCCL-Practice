@@ -1,0 +1,26 @@
+Creating 2 threads for 2 devices
+NCCL Example: One Device per Thread
+===================================
+
+========================================
+Starting RMSNorm LSA Kernel
+========================================
+Configuration:
+  - Total ranks:      2
+  - Sequence length:  128 tokens
+  - Hidden size:      1024
+  - Tokens per GPU:   64
+  - Threads per block: 256
+========================================
+
+Kernel execution completed
+
+Verifying results...
+
+========================================
+SUCCESS: Example completed successfully!
+========================================
+
+
+All NCCL communicators finalized successfully!
+EXIT=0 cmd=./01_rmsnorm_lsa/c/rmsnorm_lsa

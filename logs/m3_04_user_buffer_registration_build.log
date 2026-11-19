@@ -1,0 +1,7 @@
+make: Entering directory '/root/nccl-src/docs/examples/04_user_buffer_registration'
+make -C 01_allreduce/c
+make[1]: Entering directory '/root/nccl-src/docs/examples/04_user_buffer_registration/01_allreduce/c'
+NVCC_GENCODE is -gencode=arch=compute_75,code=sm_75 -gencode=arch=compute_80,code=sm_80 -gencode=arch=compute_90,code=sm_90 -gencode=arch=compute_100,code=sm_100 -gencode=arch=compute_120,code=sm_120 -gencode=arch=compute_110,code=sm_110 -gencode=arch=compute_120,code=compute_120
+Built target allreduce_ub
+make[1]: Leaving directory '/root/nccl-src/docs/examples/04_user_buffer_registration/01_allreduce/c'
+make: Leaving directory '/root/nccl-src/docs/examples/04_user_buffer_registration'

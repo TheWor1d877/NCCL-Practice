@@ -1,0 +1,21 @@
+Creating 2 threads for 2 devices
+NCCL Example: One Device per Thread
+===================================
+Starting Device API AllReduce initialization
+  Rank 0 using GPU device 0
+  Rank 1 using GPU device 1
+  Rank 1 initialized NCCL communicator for 2 total ranks
+  Rank 0 initialized NCCL communicator for 2 total ranks
+  Rank 1 initialized data with value 1
+  Rank 0 initialized data with value 0
+  Rank 1 created device communicator with 16 LSA barriers
+  Rank 0 created device communicator with 16 LSA barriers
+Starting AllReduce with 1048576 elements (4 MB) using Device API
+Expected result: sum of ranks 0 to 1 = 1 per element
+  Rank 1 completed AllReduce kernel execution
+  Rank 0 completed AllReduce kernel execution
+AllReduce completed. Result verification: PASSED
+All elements correctly sum to 1 (ranks 0-1)
+
+All NCCL communicators finalized successfully!
+EXIT=0 cmd=./01_allreduce_lsa/c/allreduce_lsa

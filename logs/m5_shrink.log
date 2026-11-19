@@ -1,0 +1,18 @@
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+Authorization required, but no authorization protocol specified
+
+rank 0: parent comm init rc=0 nranks=2
+rank 1: parent comm init rc=0 nranks=2
+rank 0: parent allreduce rc=0 result[0]=3.0 (expect 3.0)
+rank 1: parent allreduce rc=0 result[0]=3.0 (expect 3.0)
+rank 1: simulating failure, exiting without destroying parent comm
+rank 0: ncclCommShrink rc=0 (no error)
+rank 0: shrunk comm size=1 myrank=0
+rank 0: shrunk allreduce rc=0 result[0]=1.0 (only remaining rank, expect 1.0)
+rank 0: SUCCESS - shrink done without re-generating uniqueId
+RC=0

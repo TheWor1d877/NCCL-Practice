@@ -1,0 +1,12 @@
+Using 2 devices for collective communication
+Memory allocated for 2 communicators and streams
+NCCL communicators initialized for all devices
+  Device 0 initialized with data value 0
+  Device 1 initialized with data value 1
+Starting collective sum operation across all devices
+Collective operation completed
+Verifying results (expected sum: 1)
+  Device 0 correctly received sum: 1
+  Device 1 correctly received sum: 1
+Example completed successfully!
+EXIT=0 cmd=./01_allreduce/c/allreduce
